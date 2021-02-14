@@ -1,1 +1,18 @@
-<ng2-chessboard [(position)]="position"></ng2-chessboard>
+<h1>My Website</h1>
+<ul class="nav justify-content-center grey lighten-4 py-4">
+    <li class="nav-item"
+        (click)=onSelectHome()>
+        <a class="nav-link active" href="#!">Home</a>
+    </li>
+    <li class="nav-item"
+        (click)=onSelectPChess()>
+        <a class="nav-link" href="#!">pChess</a>
+    </li>
+    <li class="nav-item"
+        (click)=onSelectBook()>
+        <a class="nav-link" href="#!">Good Breeding</a>
+    </li>
+</ul>
+<app-home *ngIf="selectedPage===1"></app-home>
+<app-pchess-board *ngIf="selectedPage===2"></app-pchess-board>
+<app-book *ngIf="selectedPage===3"></app-book>
