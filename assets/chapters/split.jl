@@ -14,6 +14,7 @@ for (mi,m) in enumerate(moff[1:end-1])
     chap = strip(chap)
     chap = replace(chap, "\n\n" => "\n")
     chap = replace(chap, "\n\n" => "\n")
+    chap = replace(chap, "\n" => "\n\n")
     push!(chaps, chap)
 end
 
