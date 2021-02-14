@@ -12,7 +12,8 @@ mlen = [length(m.match) for m in m]
 for (mi,m) in enumerate(moff[1:end-1])
     chap = fulltext[m+mlen[mi] : moff[mi+1]-1]
     chap = strip(chap)
-    chap = replace(chap, "\n" => "\r\n\r\n")
+    chap = replace(chap, "\n\n" => "\n")
+    chap = replace(chap, "\n\n" => "\n")
     push!(chaps, chap)
 end
 
